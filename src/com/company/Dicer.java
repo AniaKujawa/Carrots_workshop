@@ -5,11 +5,11 @@ import java.util.Random;
 public class Dicer {
     int number;
 
-    public Dicer(int number) {
+    Dicer(int number) {
         this.number = number;
     }
 
-    public void throwDicers() {
+    void throwDicers() {
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder("{");
 
@@ -21,11 +21,13 @@ public class Dicer {
         System.out.println(stringBuilder.toString());
     }
 
-    public void Game() {
+    void Game() {
         int[] result = new int[number];
         for (int i=0; i<number; i++) {
             result[i] = (int) Math.ceil(Math.random()*6);
             System.out.println(result[i]);
         }
+
+
 }
 }
